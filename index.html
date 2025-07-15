@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Interactiva</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    .semestre { margin-bottom: 30px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .semestre h2 { margin-top: 0; color: steelblue; }
+    .ramo {
+      margin: 5px 0;
+      padding: 10px;
+      border-left: 5px solid #3498db;
+      background: #fdfdfd;
+      cursor: pointer;
+    }
+    .detalle {
+      display: none;
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Curricular - Pedagogía en Matemática y Computación</h1>
+
+  <!-- Semestres y ramos van aquí -->
+  <div class="semestre">
+    <h2>1° Semestre</h2>
+    <div class="ramo" onclick="toggle(this)">
+      Álgebra y Trigonometría
+      <div class="detalle">Prerrequisitos: Ninguno</div>
+    </div>
+    <div class="ramo" onclick="toggle(this)">
+      Introducción a la Pedagogía
+      <div class="detalle">Prerrequisitos: Ninguno</div>
+    </div>
+  </div>
+
+  <div class="semestre">
+    <h2>2° Semestre</h2>
+    <div class="ramo" onclick="toggle(this)">
+      Cálculo
+      <div class="detalle">Prerrequisitos: Álgebra y Trigonometría</div>
+    </div>
+    <div class="ramo" onclick="toggle(this)">
+      Inglés II
+      <div class="detalle">Prerrequisitos: Inglés I</div>
+    </div>
+  </div>
+
+  <!-- Puedes seguir agregando más semestres aquí -->
+
+  <script>
+    function toggle(el) {
+      const detalle = el.querySelector(".detalle");
+      detalle.style.display = detalle.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
 
